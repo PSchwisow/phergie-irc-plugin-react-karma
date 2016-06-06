@@ -15,9 +15,16 @@ See Phergie documentation for more information on
 
 ## Provided Commands
 
-| Command    | Parameters        | Description           |
-|:----------:|-------------------|-----------------------|
-| {commmand} | [param1] [param2] | {description}         |
+The karma plugin maintains karma values for a list of terms and compares them as requested. Terms are most often IRC nicks, but the plugin does not require this. Terms may optionally be enclosed in parentheses (most often used for terms that contain whitespace).
+
+| Command           | Description                            |
+|:-----------------:|----------------------------------------|
+| !karma term       | Get the current karma value for a term |
+| !reincarnate term | Reset the karma value for a term       |
+| term++            | Increment the karma value for a term   |
+| term--            | Decrement the karma value for a term   |
+| term1 < term2     | Compare karma values of two terms      |
+| term1 > term2     | Compare karma values of two terms      |
 
 ## Configuration
 
