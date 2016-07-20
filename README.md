@@ -2,7 +2,7 @@
 
 [Phergie](http://github.com/phergie/phergie-irc-bot-react/) plugin for handling requests to increment or decrement counters on specified terms.
 
-[![Build Status](https://secure.travis-ci.org/PSchwisow/phergie-irc-plugin-react-karma.png?branch=master)](http://travis-ci.org/PSchwisow/phergie-irc-plugin-react-karma)
+[![Build Status](https://secure.travis-ci.org/PSchwisow/phergie-irc-plugin-react-karma.png?branch=master)](http://travis-ci.org/PSchwisow/phergie-irc-plugin-react-karma) [![Code Climate](https://codeclimate.com/github/PSchwisow/phergie-irc-plugin-react-karma/badges/gpa.svg)](https://codeclimate.com/github/PSchwisow/phergie-irc-plugin-react-karma) [![Test Coverage](https://codeclimate.com/github/PSchwisow/phergie-irc-plugin-react-karma/badges/coverage.svg)](https://codeclimate.com/github/PSchwisow/phergie-irc-plugin-react-karma)
 
 ## Install
 

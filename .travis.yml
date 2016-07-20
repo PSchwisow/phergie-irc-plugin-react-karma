@@ -10,9 +10,17 @@ matrix:
   allow_failures:
     - php: hhvm
 
+addons:
+  code_climate:
+    repo_token: 326c908852ef79ca6c7132f2461be883db1e4fac73d72630d54d7fd0283a4e45
+
 before_script:
   - travis_retry composer self-update
   - travis_retry composer install
 
 script:
-  - ./vendor/bin/phpunit --coverage-text
+  - ./vendor/bin/phpunit --coverage-text --coverage-clover build/logs/clover.xml
+
+after_script:
+  - vendor/bin/test-reporter --stdout > codeclimate.json
+  - "if [ \"$TRAVIS_PHP_VERSION\" != \"hhvm\" -a \"$TRAVIS_PHP_VERSION\" != \"7\" ]; then curl -X POST -d @codeclimate.json -H 'Content-Type: application/json' -H 'User-Agent: Code Climate (PHP Test Reporter v0.1.1)' https://codeclimate.com/test_reports; fi"
