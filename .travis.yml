@@ -12,7 +12,7 @@ matrix:
 
 addons:
   code_climate:
-    repo_token: 326c908852ef79ca6c7132f2461be883db1e4fac73d72630d54d7fd0283a4e45
+    repo_token: 5379b756b43c077ae2382a02111f34e5661427838ac3c273de5d73bcb93377e6
 
 before_script:
   - travis_retry composer self-update
