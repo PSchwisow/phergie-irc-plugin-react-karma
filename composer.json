@@ -25,7 +25,8 @@
     },
     "require-dev": {
         "phpunit/phpunit": "4.5.*",
-        "phake/phake": "2.0.0-beta2"
+        "phake/phake": "2.0.0-beta2",
+        "codeclimate/php-test-reporter": "dev-master"
     },
     "suggest": {
         "phergie/phergie-irc-plugin-react-commandhelp": "provides interactive help for commands"
