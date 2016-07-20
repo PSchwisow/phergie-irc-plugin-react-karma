@@ -37,17 +37,17 @@ class Plugin extends AbstractPlugin
      */
     protected $userMessages = [
         'karma++'       => [
-            '%owner% karma is on the rise',
-            '%owner% is getting more karma',
-            '%owner% karma, karma every where and this one is for you',
-            '%owner% whaaat?!?! karma for you',
-            '%owner% this is karma, you will take it and you will like it',
-            '%owner% loves karma and getting more of it',
+            '%owner% karma is on the rise.',
+            '%owner% is getting more karma.',
+            '%owner% karma, karma every where and this one is for you.',
+            '%owner% whaaat?!?! karma for you.',
+            '%owner% this is karma, you will take it and you will like it.',
+            '%owner% loves karma and getting more of it.',
         ],
         'karma--'       => [
-            '%owner% takes a karma hit',
-            '%owner% ouch, losing karma sucks',
-            '%owner% that\'s got to hurt, goodbye karma',
+            '%owner% takes a karma hit.',
+            '%owner% ouch, losing karma sucks.',
+            '%owner% that\'s got to hurt, goodbye karma.',
         ],
         'compare-true'  => [
             'No kidding, %owner% totally kicks %owned%\'s ass !',
@@ -68,19 +68,19 @@ class Plugin extends AbstractPlugin
     ];
 
     protected $fixedKarma = [
-        'phergie'       => 'Phergie has karma of awesome',
-        'pi'            => 'pi has karma of 3.1415926535898',
-        'chucknorris'   => 'Chuck Norris has karma of Warning: Integer out of range',
-        'chuck norris'  => 'Chuck Norris has karma of Warning: Integer out of range',
-        'c'             => 'c has karma of 299 792 458 m/s',
-        'e'             => 'e has karma of 2.718281828459',
-        'euler'         => 'Euler has karma of 0.57721566490153286061',
-        'mole'          => 'mole has karma of 6.02214e23 molecules',
-        'avogadro'      => 'Avogadro has karma of 6.02214e23 molecules',
-        'mc^2'          => 'mc^2 has karma of E',
-        'mc2'           => 'mc2 has karma of E',
-        'spoon'         => 'spoon has no karma - there is no spoon',
-        'i'             => 'i haz big karma',
+        'phergie'       => 'Phergie has karma of awesome.',
+        'pi'            => 'pi has karma of 3.1415926535898.',
+        'chucknorris'   => 'Chuck Norris has karma of Warning: Integer out of range.',
+        'chuck norris'  => 'Chuck Norris has karma of Warning: Integer out of range.',
+        'c'             => 'c has karma of 299 792 458 m/s.',
+        'e'             => 'e has karma of 2.718281828459.',
+        'euler'         => 'Euler has karma of 0.57721566490153286061.',
+        'mole'          => 'mole has karma of 6.02214e23 molecules.',
+        'avogadro'      => 'Avogadro has karma of 6.02214e23 molecules.',
+        'mc^2'          => 'mc^2 has karma of E.',
+        'mc2'           => 'mc2 has karma of E.',
+        'spoon'         => 'spoon has no karma - there is no spoon.',
+        'i'             => 'i haz big karma.',
         'karma'         => 'The karma law says that all living creatures are responsible for their karma - their actions and the effects of their actions. You should watch yours.'
     ];
 
@@ -107,6 +107,8 @@ class Plugin extends AbstractPlugin
      * Sets the event loop instance.
      *
      * @param \React\EventLoop\LoopInterface $loop
+     *
+     * @todo find some way to do a unit test for this method
      */
     public function setLoop(LoopInterface $loop)
     {
@@ -424,7 +426,7 @@ REGEX;
         $nick = $event->getNick();
         $canonicalTerm = $this->getCanonicalTerm($term, $nick);
         if ($canonicalTerm == strtolower($nick)) {
-            $message = 'You can\'t give yourself karma';
+            $message = 'You can\'t give yourself karma.';
             $queue->ircPrivmsg($event->getSource(), $message);
             return false;
         }
